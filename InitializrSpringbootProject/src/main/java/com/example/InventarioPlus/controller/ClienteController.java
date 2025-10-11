@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.util.List;
 
-@WebServlet("/clientes")
 public class ClienteController extends HttpServlet {
 
     private ClienteService clienteService;

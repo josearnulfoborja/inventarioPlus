@@ -12,28 +12,829 @@
 [INFO] Copying 1 resource from src\main\resources to target\classes
 [INFO] 
 [INFO] --- compiler:3.14.0:compile (default-compile) @ InventarioPlus ---
-[INFO] Nothing to compile - all classes are up to date.
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 17 source files with javac [debug parameters release 17] to target\classes
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ InventarioPlus ---
 [INFO] skip non existing resourceDirectory C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject\src\test\resources
 [INFO] 
 [INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ InventarioPlus ---
-[INFO] Nothing to compile - all classes are up to date.
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
 [INFO] 
 [INFO] <<< spring-boot:3.5.6:run (default-cli) < test-compile @ InventarioPlus <<<
 [INFO] 
 [INFO] 
 [INFO] --- spring-boot:3.5.6:run (default-cli) @ InventarioPlus ---
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.684 s
-[INFO] Finished at: 2025-10-08T23:15:23-06:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.5.6:run (default-cli) on project InventarioPlus: Unable to find a suitable main class, please add a 'mainClass' property -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-10T21:59:11.403-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : Starting InventarioPlusApplication using Java 17.0.11 with PID 127108 (C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject\target\classes started by PC in C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject)
+2025-10-10T21:59:11.408-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-10-10T21:59:11.479-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-10T21:59:11.479-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-10T21:59:12.627-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-10T21:59:12.728-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
+2025-10-10T21:59:13.621-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-10T21:59:13.649-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-10T21:59:13.649-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-10T21:59:14.005-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-10-10T21:59:14.015-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-10T21:59:14.017-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2536 ms
+2025-10-10T21:59:14.253-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-10T21:59:14.349-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-10T21:59:14.408-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-10T21:59:14.928-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-10T21:59:14.984-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-10T21:59:15.381-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:inventarioplus user=SA
+2025-10-10T21:59:15.384-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-10T21:59:15.423-06:00  WARN 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-10T21:59:15.455-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-10T21:59:16.701-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table cliente (
+        id_cliente integer generated by default as identity,
+        correo varchar(255),
+        direccion varchar(255),
+        documento varchar(255),
+        nombre varchar(255) not null,
+        telefono varchar(255),
+        primary key (id_cliente)
+    )
+2025-10-10T21:59:16.789-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-10T21:59:17.124-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-10T21:59:17.261-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 9 mappings in 'requestMappingHandlerMapping'
+2025-10-10T21:59:17.377-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-10T21:59:17.408-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-10T21:59:17.471-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-10T21:59:17.504-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventarioplus'
+2025-10-10T21:59:17.661-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-10T21:59:18.152-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-10T21:59:18.347-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : Started InventarioPlusApplication in 7.629 seconds (process running for 8.356)
+2025-10-10T21:59:19.614-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-10T21:59:19.615-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-10T21:59:19.615-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-10T21:59:19.616-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-10T21:59:19.617-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-10T21:59:19.617-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@624c8822
+2025-10-10T21:59:19.618-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@162374d3
+2025-10-10T21:59:19.618-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-10T21:59:19.618-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-10-10T21:59:19.631-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes", parameters={}
+2025-10-10T21:59:19.646-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#list(Model)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.direccion,
+        c1_0.documento,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+2025-10-10T21:59:19.934-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2025-10-10T21:59:19.934-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.view.JstlView            : View name [/clientes.jsp], model {clientes=[]}
+2025-10-10T21:59:19.940-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.view.JstlView            : Forwarding to [/clientes.jsp]
+2025-10-10T21:59:20.849-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T21:59:20.947-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes/nuevo", parameters={}
+2025-10-10T21:59:20.948-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#nuevoForm(Model)
+2025-10-10T21:59:20.961-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2025-10-10T21:59:20.961-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.view.JstlView            : View name [/cliente_form.jsp], model {cliente=Cliente{idCliente=null, nombre='null', documento='null', telefono='null', direccion='null', correo='null'}, org.springframework.validation.BindingResult.cliente=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2025-10-10T21:59:20.962-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.view.JstlView            : Forwarding to [/cliente_form.jsp]
+2025-10-10T21:59:21.067-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T21:59:30.390-06:00  INFO 127108 --- [InventarioPlus] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 0 deletions, 5 modifications)
+2025-10-10T21:59:30.396-06:00  INFO 127108 --- [InventarioPlus] [       Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-10T21:59:30.591-06:00  INFO 127108 --- [InventarioPlus] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-10T21:59:30.594-06:00  INFO 127108 --- [InventarioPlus] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-10T21:59:30.601-06:00  WARN 127108 --- [InventarioPlus] [       Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-10-10T21:59:30.605-06:00  INFO 127108 --- [InventarioPlus] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-10T21:59:30.607-06:00  INFO 127108 --- [InventarioPlus] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-10T21:59:30.698-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : Starting InventarioPlusApplication using Java 17.0.11 with PID 127108 (C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject\target\classes started by PC in C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject)
+2025-10-10T21:59:30.699-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-10-10T21:59:30.995-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-10T21:59:31.011-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2025-10-10T21:59:31.123-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-10T21:59:31.125-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-10T21:59:31.126-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-10T21:59:31.219-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-10-10T21:59:31.225-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-10T21:59:31.225-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 522 ms
+2025-10-10T21:59:31.274-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-10T21:59:31.277-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-10T21:59:31.290-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-10T21:59:31.292-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-10T21:59:31.295-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:inventarioplus user=SA
+2025-10-10T21:59:31.295-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-10T21:59:31.296-06:00  WARN 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-10T21:59:31.297-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-10T21:59:31.367-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table cliente (
+        id_cliente integer generated by default as identity,
+        correo varchar(255),
+        direccion varchar(255),
+        documento varchar(255),
+        nombre varchar(255) not null,
+        telefono varchar(255),
+        primary key (id_cliente)
+    )
+2025-10-10T21:59:31.371-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-10T21:59:31.468-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-10T21:59:31.494-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 9 mappings in 'requestMappingHandlerMapping'
+2025-10-10T21:59:31.538-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-10T21:59:31.545-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-10T21:59:31.555-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-10T21:59:31.573-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventarioplus'
+2025-10-10T21:59:31.628-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-10T21:59:31.648-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-10T21:59:31.653-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : Started InventarioPlusApplication in 0.985 seconds (process running for 21.662)
+2025-10-10T21:59:31.662-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-10T22:00:07.149-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-10T22:00:07.150-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-10T22:00:07.150-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-10T22:00:07.151-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-10T22:00:07.152-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-10T22:00:07.153-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@67688d57
+2025-10-10T22:00:07.155-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7452accd
+2025-10-10T22:00:07.158-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-10T22:00:07.160-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2025-10-10T22:00:07.161-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:00:07.171-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:00:07.186-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:00:29.230-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/mvc/clientes", parameters={masked}
+2025-10-10T22:00:29.231-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#create(Cliente)
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, direccion, documento, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, ?, ?, default)
+2025-10-10T22:00:29.344-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.view.RedirectView        : View name [redirect:], model {}
+2025-10-10T22:00:29.346-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2025-10-10T22:00:29.356-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes", parameters={}
+2025-10-10T22:00:29.356-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#list(Model)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.direccion,
+        c1_0.documento,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+2025-10-10T22:00:29.364-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:00:29.365-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.view.JstlView            : View name [/clientes.jsp], model {clientes=[Cliente{idCliente=1, nombre='CRISTIAN STEVEN', documento='065115446', telefono='76035485', direccion='san salvador', correo='cristiaanx899@gmail.com'}]}
+2025-10-10T22:00:29.367-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.view.JstlView            : Forwarding to [/clientes.jsp]
+2025-10-10T22:00:29.483-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:00:29.517-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:00:29.518-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:00:29.528-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:00:44.903-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes/nuevo", parameters={}
+2025-10-10T22:00:44.904-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#nuevoForm(Model)
+2025-10-10T22:00:44.908-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:00:44.910-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.view.JstlView            : View name [/cliente_form.jsp], model {cliente=Cliente{idCliente=null, nombre='null', documento='null', telefono='null', direccion='null', correo='null'}, org.springframework.validation.BindingResult.cliente=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2025-10-10T22:00:44.911-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.view.JstlView            : Forwarding to [/cliente_form.jsp]
+2025-10-10T22:00:44.922-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:00:44.949-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:00:44.950-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:00:44.963-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:00:57.041-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/mvc/clientes", parameters={masked}
+2025-10-10T22:00:57.043-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#create(Cliente)
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, direccion, documento, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, ?, ?, default)
+2025-10-10T22:00:57.052-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-4] o.s.web.servlet.view.RedirectView        : View name [redirect:], model {}
+2025-10-10T22:00:57.053-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2025-10-10T22:00:57.059-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes", parameters={}
+2025-10-10T22:00:57.060-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#list(Model)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.direccion,
+        c1_0.documento,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+2025-10-10T22:00:57.066-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:00:57.067-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.view.JstlView            : View name [/clientes.jsp], model {clientes=[Cliente{idCliente=1, nombre='CRISTIAN STEVEN', documento='065115446', telefono='76035485', direccion='san salvador', correo='cristiaanx899@gmail.com'}, Cliente{idCliente=2, nombre='CRISTIAN STEVEN', documento='065115446', telefono='76035485', direccion='Calle Ppl. Col . El transito, casa A60, Cuscatancingo ', correo='cristiaanx899@gmail.com'}]}
+2025-10-10T22:00:57.067-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.view.JstlView            : Forwarding to [/clientes.jsp]
+2025-10-10T22:00:57.069-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:00:57.092-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:00:57.093-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:00:57.102-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:00:59.225-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes/editar/", parameters={}
+2025-10-10T22:00:59.226-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:00:59.229-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-10T22:00:59.235-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource mvc/clientes/editar.]
+2025-10-10T22:00:59.235-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-10T22:00:59.236-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-10-10T22:00:59.238-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-10-10T22:00:59.253-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-10-10T22:00:59.260-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-10-10T22:01:58.589-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/mvc/clientes", parameters={masked}
+2025-10-10T22:01:58.590-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#create(Cliente)
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, direccion, documento, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, ?, ?, default)
+2025-10-10T22:01:58.594-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.view.RedirectView        : View name [redirect:], model {}
+2025-10-10T22:01:58.595-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2025-10-10T22:04:01.172-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes", parameters={}
+2025-10-10T22:04:01.173-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#list(Model)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.direccion,
+        c1_0.documento,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+2025-10-10T22:04:01.185-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:04:01.189-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.view.JstlView            : View name [/clientes.jsp], model {clientes=[Cliente{idCliente=1, nombre='CRISTIAN STEVEN', documento='065115446', telefono='76035485', direccion='san salvador', correo='cristiaanx899@gmail.com'}, Cliente{idCliente=2, nombre='CRISTIAN STEVEN', documento='065115446', telefono='76035485', direccion='Calle Ppl. Col . El transito, casa A60, Cuscatancingo ', correo='cristiaanx899@gmail.com'}, Cliente{idCliente=3, nombre='Juan Pérez', documento='12345678', telefono='555-1234', direccion='Calle 123', correo='juan.perez@example.com'}]}
+2025-10-10T22:04:01.190-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.view.JstlView            : Forwarding to [/clientes.jsp]
+2025-10-10T22:04:01.193-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:01.223-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:04:01.225-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:04:01.230-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:05.105-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes/nuevo", parameters={}
+2025-10-10T22:04:05.106-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#nuevoForm(Model)
+2025-10-10T22:04:05.108-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:04:05.109-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.view.JstlView            : View name [/cliente_form.jsp], model {cliente=Cliente{idCliente=null, nombre='null', documento='null', telefono='null', direccion='null', correo='null'}, org.springframework.validation.BindingResult.cliente=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2025-10-10T22:04:05.109-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.view.JstlView            : Forwarding to [/cliente_form.jsp]
+2025-10-10T22:04:05.116-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:05.143-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:04:05.145-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:04:05.147-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:07.069-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes/nuevo", parameters={}
+2025-10-10T22:04:07.073-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#nuevoForm(Model)
+2025-10-10T22:04:07.075-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:04:07.077-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.view.JstlView            : View name [/cliente_form.jsp], model {cliente=Cliente{idCliente=null, nombre='null', documento='null', telefono='null', direccion='null', correo='null'}, org.springframework.validation.BindingResult.cliente=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2025-10-10T22:04:07.078-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.view.JstlView            : Forwarding to [/cliente_form.jsp]
+2025-10-10T22:04:07.079-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:07.109-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:04:07.112-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:04:07.116-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:07.660-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes/nuevo", parameters={}
+2025-10-10T22:04:07.663-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#nuevoForm(Model)
+2025-10-10T22:04:07.664-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:04:07.664-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.view.JstlView            : View name [/cliente_form.jsp], model {cliente=Cliente{idCliente=null, nombre='null', documento='null', telefono='null', direccion='null', correo='null'}, org.springframework.validation.BindingResult.cliente=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2025-10-10T22:04:07.664-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.view.JstlView            : Forwarding to [/cliente_form.jsp]
+2025-10-10T22:04:07.665-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:07.682-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:04:07.686-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:04:07.694-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:08.125-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes/nuevo", parameters={}
+2025-10-10T22:04:08.125-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#nuevoForm(Model)
+2025-10-10T22:04:08.127-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:04:08.128-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.view.JstlView            : View name [/cliente_form.jsp], model {cliente=Cliente{idCliente=null, nombre='null', documento='null', telefono='null', direccion='null', correo='null'}, org.springframework.validation.BindingResult.cliente=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2025-10-10T22:04:08.128-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.view.JstlView            : Forwarding to [/cliente_form.jsp]
+2025-10-10T22:04:08.156-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:08.192-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:04:08.193-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:04:08.202-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:19.646-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/mvc/clientes", parameters={masked}
+2025-10-10T22:04:19.648-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#create(Cliente)
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, direccion, documento, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, ?, ?, default)
+2025-10-10T22:04:19.654-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.view.RedirectView        : View name [redirect:], model {}
+2025-10-10T22:04:19.655-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2025-10-10T22:04:19.660-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes", parameters={}
+2025-10-10T22:04:19.661-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#list(Model)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.direccion,
+        c1_0.documento,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+2025-10-10T22:04:19.665-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:04:19.665-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.view.JstlView            : View name [/clientes.jsp], model {clientes=[Cliente{idCliente=1, nombre='CRISTIAN STEVEN', documento='065115446', telefono='76035485', direccion='san salvador', correo='cristiaanx899@gmail.com'}, Cliente{idCliente=2, nombre='CRISTIAN STEVEN', documento='065115446', telefono='76035485', direccion='Calle Ppl. Col . El transito, casa A60, Cuscatancingo ', correo='cristiaanx899@gmail.com'}, Cliente{idCliente=3, nombre='Juan Pérez', documento='12345678', telefono='555-1234', direccion='Calle 123', correo='juan.perez@example.com'}, Cliente{idCliente=4, nombre='CRISTIAN STEVEN', documento='065115446', telefono='76035485', direccion='Calle Ppl. Col . El transito, casa A60, Cuscatancingo ', correo='cristiaanx899@gmail.com'}]}
+2025-10-10T22:04:19.666-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.view.JstlView            : Forwarding to [/clientes.jsp]
+2025-10-10T22:04:19.667-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:04:19.694-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:04:19.696-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:04:19.704-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:06:48.233-06:00  INFO 127108 --- [InventarioPlus] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-10T22:06:48.272-06:00  INFO 127108 --- [InventarioPlus] [       Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-10T22:06:48.636-06:00  INFO 127108 --- [InventarioPlus] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-10T22:06:48.650-06:00  INFO 127108 --- [InventarioPlus] [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-10T22:06:48.672-06:00  WARN 127108 --- [InventarioPlus] [       Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-10-10T22:06:48.672-06:00  INFO 127108 --- [InventarioPlus] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-10T22:06:48.679-06:00  INFO 127108 --- [InventarioPlus] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-10T22:06:49.008-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : Starting InventarioPlusApplication using Java 17.0.11 with PID 127108 (C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject\target\classes started by PC in C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject)
+2025-10-10T22:06:49.008-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-10-10T22:06:49.336-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-10T22:06:49.367-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+2025-10-10T22:06:49.498-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-10T22:06:49.499-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-10T22:06:49.499-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-10T22:06:49.600-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-10-10T22:06:49.609-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-10T22:06:49.610-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 598 ms
+2025-10-10T22:06:49.667-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-10T22:06:49.671-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-10T22:06:49.686-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-10T22:06:49.688-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-10-10T22:06:49.692-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:inventarioplus user=SA
+2025-10-10T22:06:49.693-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-10-10T22:06:49.694-06:00  WARN 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-10T22:06:49.695-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-10T22:06:49.744-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table cliente (
+        id_cliente integer generated by default as identity,
+        correo varchar(255),
+        direccion varchar(255),
+        documento varchar(255),
+        nombre varchar(255) not null,
+        telefono varchar(255),
+        primary key (id_cliente)
+    )
+2025-10-10T22:06:49.748-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-10T22:06:49.824-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-10T22:06:49.838-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 9 mappings in 'requestMappingHandlerMapping'
+2025-10-10T22:06:49.888-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-10T22:06:49.918-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-10T22:06:49.928-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-10T22:06:49.938-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventarioplus'
+2025-10-10T22:06:49.964-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-10T22:06:49.976-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-10T22:06:49.982-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : Started InventarioPlusApplication in 1.007 seconds (process running for 459.991)
+2025-10-10T22:06:49.983-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-10T22:07:03.865-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-10T22:07:03.865-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-10T22:07:03.866-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-10T22:07:03.866-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-10T22:07:03.866-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-10T22:07:03.867-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4f4825f4
+2025-10-10T22:07:03.868-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7a4f2708
+2025-10-10T22:07:03.868-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-10T22:07:03.868-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-10-10T22:07:03.868-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2025-10-10T22:07:03.870-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.HomeController#home()
+2025-10-10T22:07:03.872-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2025-10-10T22:07:03.872-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.w.servlet.view.InternalResourceView  : View name [forward:], model {}
+2025-10-10T22:07:03.873-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.w.servlet.view.InternalResourceView  : Forwarding to [/index.jsp]
+2025-10-10T22:07:04.025-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2025-10-10T22:07:12.495-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/HNAP1/", parameters={}
+2025-10-10T22:07:12.496-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:07:12.503-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-10T22:07:12.504-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource HNAP1.]
+2025-10-10T22:07:12.505-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-10T22:07:12.507-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-10-10T22:07:12.510-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-10-10T22:07:12.577-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-10T22:07:12.580-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Oct 10 22:07:12 CST 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-10-10T22:07:12.652-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-10-10T22:07:15.005-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2025-10-10T22:07:15.007-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.HomeController#home()
+2025-10-10T22:07:15.009-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2025-10-10T22:07:15.010-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.w.servlet.view.InternalResourceView  : View name [forward:], model {}
+2025-10-10T22:07:15.010-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.w.servlet.view.InternalResourceView  : Forwarding to [/index.jsp]
+2025-10-10T22:07:15.012-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2025-10-10T22:07:15.015-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/loginMsg.js", parameters={}
+2025-10-10T22:07:15.015-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:07:15.019-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-10T22:07:15.020-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource loginMsg.js.]
+2025-10-10T22:07:15.020-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-10T22:07:15.021-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-10-10T22:07:15.021-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-10-10T22:07:15.022-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-10T22:07:15.023-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Oct 10 22:07:15 CST 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-10-10T22:07:15.025-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-10-10T22:07:15.027-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/cgi/get.cgi?cmd=home_login", parameters={masked}
+2025-10-10T22:07:15.028-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:07:15.031-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-10T22:07:15.032-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource cgi/get.cgi.]
+2025-10-10T22:07:15.032-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-10T22:07:15.033-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?cmd=home_login", parameters={masked}
+2025-10-10T22:07:15.033-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-10-10T22:07:15.034-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-10T22:07:15.035-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Oct 10 22:07:15 CST 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-10-10T22:07:15.047-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-10-10T22:07:23.155-06:00  INFO 127108 --- [InventarioPlus] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-10T22:07:23.158-06:00  INFO 127108 --- [InventarioPlus] [      Thread-12] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-10T22:07:23.365-06:00  INFO 127108 --- [InventarioPlus] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-10T22:07:23.368-06:00  INFO 127108 --- [InventarioPlus] [      Thread-12] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-10T22:07:23.369-06:00  WARN 127108 --- [InventarioPlus] [      Thread-12] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-10-10T22:07:23.369-06:00  INFO 127108 --- [InventarioPlus] [      Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-10-10T22:07:23.372-06:00  INFO 127108 --- [InventarioPlus] [      Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-10T22:07:23.473-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : Starting InventarioPlusApplication using Java 17.0.11 with PID 127108 (C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject\target\classes started by PC in C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject)
+2025-10-10T22:07:23.475-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-10-10T22:07:23.777-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-10T22:07:23.790-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
+2025-10-10T22:07:23.893-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-10T22:07:23.894-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-10T22:07:23.895-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-10T22:07:23.982-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-10-10T22:07:23.984-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-10T22:07:23.985-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 497 ms
+2025-10-10T22:07:24.021-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-10T22:07:24.024-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-10T22:07:24.033-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-10T22:07:24.035-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-10-10T22:07:24.038-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:inventarioplus user=SA
+2025-10-10T22:07:24.038-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-10-10T22:07:24.039-06:00  WARN 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-10T22:07:24.040-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-10T22:07:24.078-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table cliente (
+        id_cliente integer generated by default as identity,
+        correo varchar(255),
+        direccion varchar(255),
+        documento varchar(255),
+        nombre varchar(255) not null,
+        telefono varchar(255),
+        primary key (id_cliente)
+    )
+2025-10-10T22:07:24.093-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-10T22:07:24.148-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-10T22:07:24.163-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 9 mappings in 'requestMappingHandlerMapping'
+2025-10-10T22:07:24.202-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-10T22:07:24.208-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-10T22:07:24.217-06:00 DEBUG 127108 --- [InventarioPlus] [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-10T22:07:24.229-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:inventarioplus'
+2025-10-10T22:07:24.262-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-10T22:07:24.273-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-10T22:07:24.278-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : Started InventarioPlusApplication in 0.835 seconds (process running for 494.286)
+2025-10-10T22:07:24.279-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-10T22:07:30.092-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-10T22:07:30.092-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-10T22:07:30.093-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-10T22:07:30.093-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-10T22:07:30.094-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-10T22:07:30.094-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1ca063b
+2025-10-10T22:07:30.095-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@420584ac
+2025-10-10T22:07:30.095-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-10T22:07:30.095-06:00  INFO 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-10T22:07:30.096-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:07:30.097-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:07:30.100-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:07:31.289-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:07:31.295-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:07:31.298-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:07:32.146-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:07:32.147-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:07:32.150-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:07:32.395-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:07:32.398-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:07:32.401-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:07:32.611-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:07:32.612-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:07:32.616-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:07:36.937-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2025-10-10T22:07:36.938-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.HomeController#home()
+2025-10-10T22:07:36.940-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:07:36.941-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.w.servlet.view.InternalResourceView  : View name [forward:], model {}
+2025-10-10T22:07:36.942-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.w.servlet.view.InternalResourceView  : Forwarding to [/index.jsp]
+2025-10-10T22:07:37.083-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2025-10-10T22:07:37.242-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:07:37.244-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:07:37.247-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:07:54.117-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/mvc/clientes", parameters={masked}
+2025-10-10T22:07:54.118-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#create(Cliente, RedirectAttributes)
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, direccion, documento, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, ?, ?, default)
+2025-10-10T22:07:54.135-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.view.RedirectView        : View name [redirect:], model {}
+2025-10-10T22:07:54.156-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2025-10-10T22:07:54.160-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes", parameters={}
+2025-10-10T22:07:54.161-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#list(Model)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.direccion,
+        c1_0.documento,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+2025-10-10T22:07:54.169-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:07:54.174-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-4] o.s.web.servlet.view.JstlView            : View name [/clientes.jsp], model {success=Cliente registrado correctamente., clientes=[Cliente{idCliente=1, nombre='CRISTIAN STEVEN', documento='065115466', telefono='76035485', direccion='Calle Ppl. Col . El transito, casa A60, Cuscatancingo ', correo='cristiaanx899@gmail.com'}]}
+2025-10-10T22:07:54.175-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-4] o.s.web.servlet.view.JstlView            : Forwarding to [/clientes.jsp]
+2025-10-10T22:07:54.358-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:07:54.376-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:07:54.377-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:07:54.380-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:08:04.258-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/mvc/clientes/nuevo", parameters={}
+2025-10-10T22:08:04.259-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.InventarioPlus.controller.ClientesMvcController#nuevoForm(Model)
+2025-10-10T22:08:04.261-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-10-10T22:08:04.262-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.view.JstlView            : View name [/cliente_form.jsp], model {cliente=Cliente{idCliente=null, nombre='null', documento='null', telefono='null', direccion='null', correo='null'}, org.springframework.validation.BindingResult.cliente=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+2025-10-10T22:08:04.262-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.view.JstlView            : Forwarding to [/cliente_form.jsp]
+2025-10-10T22:08:04.266-06:00 DEBUG 127108 --- [InventarioPlus] [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:08:04.295-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/assets/css/estilos.css", parameters={}
+2025-10-10T22:08:04.295-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-10T22:08:04.301-06:00 DEBUG 127108 --- [InventarioPlus] [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-10T22:10:48.459-06:00  INFO 127108 --- [InventarioPlus] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-10T22:10:48.462-06:00  INFO 127108 --- [InventarioPlus] [      Thread-16] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-10T22:10:48.690-06:00  INFO 127108 --- [InventarioPlus] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-10T22:10:48.692-06:00  INFO 127108 --- [InventarioPlus] [      Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-10T22:10:48.695-06:00  WARN 127108 --- [InventarioPlus] [      Thread-16] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-10-10T22:10:48.695-06:00  INFO 127108 --- [InventarioPlus] [      Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-10-10T22:10:48.696-06:00  INFO 127108 --- [InventarioPlus] [      Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-10T22:10:48.772-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : Starting InventarioPlusApplication using Java 17.0.11 with PID 127108 (C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject\target\classes started by PC in C:\Users\PC\Documents\GitHub\inventarioPlus\InitializrSpringbootProject)
+2025-10-10T22:10:48.772-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] c.e.I.InventarioPlusApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-10-10T22:10:48.957-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-10T22:10:48.986-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+2025-10-10T22:10:49.086-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-10T22:10:49.087-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-10T22:10:49.088-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-10T22:10:49.167-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-10-10T22:10:49.169-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-10T22:10:49.169-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 396 ms
+2025-10-10T22:10:49.209-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-10T22:10:49.213-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-10T22:10:49.221-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-10T22:10:49.223-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-10-10T22:10:50.248-06:00  WARN 127108 --- [InventarioPlus] [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 50100, SQLState: HYC00
+2025-10-10T22:10:50.248-06:00 ERROR 127108 --- [InventarioPlus] [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Caracteristica no soportada: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-232]
+2025-10-10T22:10:50.253-06:00  WARN 127108 --- [InventarioPlus] [  restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [Caracteristica no soportada: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-232]] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:334) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar:3.5.6]
+	at com.example.InventarioPlus.InventarioPlusApplication.main(InventarioPlusApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.6.jar:3.5.6]
+Caused by: org.h2.jdbc.JdbcSQLFeatureNotSupportedException: Caracteristica no soportada: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:568) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:287) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.Database.<init>(Database.java:280) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.Engine.openSession(Engine.java:92) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.Engine.openSession(Engine.java:222) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.Engine.createSession(Engine.java:201) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:344) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.Driver.connect(Driver.java:59) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	... 40 common frames omitted
+
+2025-10-10T22:10:50.268-06:00  WARN 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-10T22:10:50.271-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 2.1.214
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-10T22:10:50.311-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-10T22:10:50.313-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-10-10T22:10:51.316-06:00  WARN 127108 --- [InventarioPlus] [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 50100, SQLState: HYC00
+2025-10-10T22:10:51.319-06:00 ERROR 127108 --- [InventarioPlus] [  restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Caracteristica no soportada: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-232]
+2025-10-10T22:10:51.321-06:00 ERROR 127108 --- [InventarioPlus] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Caracteristica no soportada: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-232]] [n/a]
+2025-10-10T22:10:51.322-06:00  WARN 127108 --- [InventarioPlus] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Caracteristica no soportada: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-232]] [n/a]
+2025-10-10T22:10:51.324-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-10T22:10:51.337-06:00  INFO 127108 --- [InventarioPlus] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-10T22:10:51.366-06:00 ERROR 127108 --- [InventarioPlus] [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Caracteristica no soportada: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-232]] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar:3.5.6]
+	at com.example.InventarioPlus.InventarioPlusApplication.main(InventarioPlusApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.6.jar:3.5.6]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Caracteristica no soportada: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-232]] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 20 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Caracteristica no soportada: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-232]] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:93) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.11.jar:6.2.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.11.jar:6.2.11]
+	... 24 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLFeatureNotSupportedException: Caracteristica no soportada: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:568) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:287) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.Database.<init>(Database.java:280) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.Engine.openSession(Engine.java:92) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.Engine.openSession(Engine.java:222) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.Engine.createSession(Engine.java:201) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:344) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.Driver.connect(Driver.java:59) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	... 44 common frames omitted
+
