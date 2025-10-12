@@ -55,6 +55,22 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+                <dependency>
+                    <groupId>org.apache.tomcat.embed</groupId>
+                    <artifactId>tomcat-embed-jasper</artifactId>
+                </dependency>
+                    <dependency>
+                        <groupId>javax.servlet</groupId>
+                        <artifactId>jstl</artifactId>
+                         <version>1.2</version>
+                    </dependency>
+<dependency>
+    <groupId>org.glassfish</groupId>
+    <artifactId>jakarta.faces</artifactId>
+    <version>4.0.1</version> <!-- o la versión compatible con tu stack -->
+</dependency>
+
+                
 	</dependencies>
 
 	<build>
