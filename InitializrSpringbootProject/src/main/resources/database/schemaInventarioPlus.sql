@@ -16,6 +16,7 @@ CREATE TABLE Usuarios (
     apellido VARCHAR(100) NOT NULL,
     correo_electronico VARCHAR(150) UNIQUE NOT NULL,
     telefono VARCHAR(20),
+    dui VARCHAR(10) UNIQUE,  -- Campo DUI (formato: 00000000-0)
     username VARCHAR(50) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,  
     rol_id INT NOT NULL DEFAULT 3,   
