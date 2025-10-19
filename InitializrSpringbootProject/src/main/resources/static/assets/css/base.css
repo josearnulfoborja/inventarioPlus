@@ -1,0 +1,40 @@
+/* Base (compartido) */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --sidebar-width: 250px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Utilidades */
+.text-primary-custom { 
+    color: var(--primary-color) !important; 
+}
+.text-secondary-custom { 
+    color: var(--secondary-color) !important; 
+}
+.bg-primary-custom { 
+    background-color: var(--primary-color) !important; 
+}
+.bg-secondary-custom { 
+    background-color: var(--secondary-color) !important; 
+}
+
+/* Animaciones comunes */
+@keyframes fadeIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+.fade-in { animation: fadeIn .5s ease-in-out; }
+
+@keyframes slideIn { from{transform:translateX(-100%)} to{transform:translateX(0)} }
+.slide-in { animation: slideIn .3s ease-out; }
