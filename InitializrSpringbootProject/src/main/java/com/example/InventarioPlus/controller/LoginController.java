@@ -10,6 +10,11 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 public class LoginController {
 
+    @GetMapping("/")
+    public String redirectToIndex() {
+        return "redirect:/index.html";
+    }
+
     @GetMapping("/login")
     public String showLoginForm(Model model, HttpSession session) {
         return "redirect:/login.html";
