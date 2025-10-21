@@ -5,9 +5,18 @@
 package com.example.InventarioPlus.controller;
 
 /**
- *
+ * Controlador REST para gestionar operaciones CRUD de Roles.
+ * 
+ * Endpoints disponibles:
+ * - GET    /api/roles      -> Listar todos los roles
+ * - GET    /api/roles/{id} -> Obtener un rol por ID
+ * - POST   /api/roles      -> Crear un nuevo rol
+ * - PUT    /api/roles/{id} -> Actualizar un rol existente
+ * - DELETE /api/roles/{id} -> Eliminar un rol
+ * 
  * @author User
  */
+import com.example.InventarioPlus.dto.ApiResponse;
 import com.example.InventarioPlus.model.Rol;
 import com.example.InventarioPlus.service.RolService;
 import org.springframework.web.bind.annotation.*;
