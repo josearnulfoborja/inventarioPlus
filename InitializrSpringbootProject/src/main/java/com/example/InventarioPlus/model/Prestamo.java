@@ -42,6 +42,7 @@ public class Prestamo {
 
     public Prestamo() {}
 
+    // CONSTRUCTOR PARA INICIALIZAR
     public Prestamo(LocalDate fechaEntrega, LocalDate fechaDevolucion, LocalDate fechaPrevista,
                     BigDecimal costoTotal, String estadoPrestamo, Cliente cliente,
                     Equipo equipo, Especialista especialista) {
@@ -55,6 +56,7 @@ public class Prestamo {
         this.especialista = especialista;
     }
 
+    // METODOS SET Y GETTERS
     public Long getIdPrestamo() {
         return idPrestamo;
     }
