@@ -1,4 +1,5 @@
-import com.example.InventarioPlus.model.Rol;
+package com.example.InventarioPlus.service;
+
 import com.example.InventarioPlus.model.TipoEquipo;
 import com.example.InventarioPlus.repository.TipoEquipoRepository;
 import org.springframework.stereotype.Service;

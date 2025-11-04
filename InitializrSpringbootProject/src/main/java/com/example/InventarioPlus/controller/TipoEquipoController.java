@@ -1,5 +1,7 @@
+package com.example.InventarioPlus.controller;
 
 import com.example.InventarioPlus.model.TipoEquipo;
+import com.example.InventarioPlus.service.TipoEquipoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
