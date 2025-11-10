@@ -45,13 +45,14 @@ public class PrestamoController {
     public Prestamo actualizarPrestamo(@PathVariable Long id, @RequestBody Prestamo prestamo) {
         return prestamoService.obtenerPrestamoPorId(id).map(p -> {
             p.setFechaEntrega(prestamo.getFechaEntrega());
+            p.setFechaPrestamo(prestamo.getFechaPrestamo());
             p.setFechaDevolucion(prestamo.getFechaDevolucion());
             p.setFechaPrevista(prestamo.getFechaPrevista());
             p.setCostoTotal(prestamo.getCostoTotal());
             p.setEstadoPrestamo(prestamo.getEstadoPrestamo());
-            p.setCliente(prestamo.getCliente());
-            p.setEquipo(prestamo.getEquipo());
-            p.setEspecialista(prestamo.getEspecialista());
+            p.setClienteId(prestamo.getClienteId());
+            p.setEquipoId(prestamo.getEquipoId());
+            p.setEspecialistaId(prestamo.getEspecialistaId());
             return prestamoService.guardarPrestamo(p);
         }).orElseThrow(() -> new RuntimeException("Préstamo no encontrado con id " + id));
     }

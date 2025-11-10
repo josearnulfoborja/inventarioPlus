@@ -41,14 +41,22 @@ public class EspecialistaController {
         return especialistaService.guardarEspecialista(especialista);
     }
 
-    @PutMapping("/{id}")
-    public Especialista actualizarEspecialista(@PathVariable Long id, @RequestBody Especialista especialista) {
-        return especialistaService.obtenerEspecialistaPorId(id).map(e -> {
-            e.setNombre(especialista.getNombre());
-            e.setDisponibilidad(especialista.getDisponibilidad());
-            return especialistaService.guardarEspecialista(e);
-        }).orElseThrow(() -> new RuntimeException("Especialista no encontrado con id " + id));
-    }
+ @PutMapping("/{id}")
+public Especialista actualizarEspecialista(@PathVariable Long id, @RequestBody Especialista especialista) {
+    return especialistaService.obtenerEspecialistaPorId(id).map(e -> {
+        e.setNombre(especialista.getNombre());
+        e.setDocumento(especialista.getDocumento());
+        e.setTelefono(especialista.getTelefono());
+        e.setDireccion(especialista.getDireccion());
+        e.setCorreo(especialista.getCorreo());
+        e.setDisponibilidad(especialista.getDisponibilidad());
+        e.setUsuarioId(especialista.getUsuarioId());
+        e.setActivo(especialista.getActivo());
+        e.setFechaActualizacion(especialista.getFechaActualizacion());
+        return especialistaService.guardarEspecialista(e);
+    }).orElseThrow(() -> new RuntimeException("Especialista no encontrado con id " + id));
+}
+
 
     @DeleteMapping("/{id}")
     public String eliminarEspecialista(@PathVariable Long id) {
