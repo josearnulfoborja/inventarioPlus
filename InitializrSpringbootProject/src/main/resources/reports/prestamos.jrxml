@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Simple JRXML de ejemplo para Prestamos -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="prestamos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9f1a9b0-0000-0000-0000-000000000001">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Dummy Data Adapter"/>
+    <field name="idPrestamo" class="java.lang.Long"/>
+    <field name="clienteId" class="java.lang.Long"/>
+    <field name="equipoId" class="java.lang.Long"/>
+    <field name="fechaPrestamo" class="java.lang.Object"/>
+    <field name="estadoPrestamo" class="java.lang.String"/>
+    <field name="costoTotal" class="java.math.BigDecimal"/>
+
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="10" width="555" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Reporte de Préstamos]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="80" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["ID Préstamo"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="90" y="0" width="80" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["ClienteID"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="180" y="0" width="80" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["EquipoID"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="270" y="0" width="120" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["FechaPrestamo"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="400" y="0" width="80" height="20"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Estado"]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="80" height="20"/>
+                <textFieldExpression><![CDATA[$F{idPrestamo}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="90" y="0" width="80" height="20"/>
+                <textFieldExpression><![CDATA[$F{clienteId}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="180" y="0" width="80" height="20"/>
+                <textFieldExpression><![CDATA[$F{equipoId}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="270" y="0" width="120" height="20"/>
+                <textFieldExpression><![CDATA[$F{fechaPrestamo}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="400" y="0" width="80" height="20"/>
+                <textFieldExpression><![CDATA[$F{estadoPrestamo}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+</jasperReport>

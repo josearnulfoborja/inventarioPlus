@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Simple JRXML de ejemplo para Inspecciones/Evaluaciones -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="inspecciones" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+    <field name="idEvaluacion" class="java.lang.Long"/>
+    <field name="observaciones" class="java.lang.String"/>
+    <field name="aprobado" class="java.lang.Boolean"/>
+    <field name="equipo" class="java.lang.Object"/>
+    <field name="usuario" class="java.lang.Object"/>
+
+    <title>
+        <band height="40">
+            <staticText>
+                <reportElement x="0" y="5" width="555" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Reporte de Inspecciones / Evaluaciones Técnicas]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="60" height="20"/>
+                <textElement><font isBold="true"/></textElement>
+                <textFieldExpression><![CDATA["ID"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="70" y="0" width="200" height="20"/>
+                <textElement><font isBold="true"/></textElement>
+                <textFieldExpression><![CDATA["Observaciones"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="0" width="60" height="20"/>
+                <textElement><font isBold="true"/></textElement>
+                <textFieldExpression><![CDATA["Aprobado"]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="60" height="20"/>
+                <textFieldExpression><![CDATA[$F{idEvaluacion}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="70" y="0" width="200" height="20"/>
+                <textFieldExpression><![CDATA[$F{observaciones}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="0" width="60" height="20"/>
+                <textFieldExpression><![CDATA[$F{aprobado}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+</jasperReport>
