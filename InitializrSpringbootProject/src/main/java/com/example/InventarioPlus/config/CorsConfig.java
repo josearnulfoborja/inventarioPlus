@@ -6,6 +6,9 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Configuración global de CORS para permitir peticiones desde el frontend
  * Angular.
@@ -29,14 +32,26 @@ public class CorsConfig {
         // Permite peticiones desde el frontend Angular
         config.addAllowedOrigin("http://localhost:4200");
 
-        // Permite todos los headers
-        config.addAllowedHeader("*");
+        // Permite los headers que normalmente usa el frontend, incluyendo Authorization
+        config.setAllowedHeaders(
+                Arrays.asList("Authorization", "Content-Type", "Accept", "X-Requested-With", "Cache-Control"));
 
-        // Permite todos los métodos HTTP (GET, POST, PUT, DELETE, etc.)
-        config.addAllowedMethod("*");
+        // Expone la cabecera Authorization al cliente (si usas tokens en header)
+        config.setExposedHeaders(List.of("Authorization"));
 
-        // Aplica esta configuración a todas las rutas que empiecen con /api/
-        source.registerCorsConfiguration("/api/**", config);
+        // Permite métodos comunes y OPTIONS para preflight
+        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH", "HEAD"));
+
+        // Tiempo en segundos que el resultado del preflight puede ser cacheado por el
+        // navegador
+        config.setMaxAge(3600L);
+
+        // Permite orígenes (usa allowed origin patterns si necesitas wildcard)
+        config.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
+
+        // Aplica esta configuración a todas las rutas (incluye endpoints protegidos por
+        // Spring Security)
+        source.registerCorsConfiguration("/**", config);
 
         return new CorsFilter(source);
     }

@@ -9,12 +9,13 @@ package com.example.InventarioPlus.repository;
  * @author User
  */
 
-
 import com.example.InventarioPlus.model.Usuario;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    // Spring Data JPA ya nos da métodos como save, findAll, findById, deleteById
+    // Buscar por username para autenticación
+    Optional<Usuario> findByUsername(String username);
 }
