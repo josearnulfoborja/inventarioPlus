@@ -1,0 +1,501 @@
+/*
+	Listado de Inserts
+*/
+
+-- Roles
+INSERT INTO roles (id_rol, nombre_rol, descripcion) VALUES
+(1, 'ADMINISTRADOR', 'Administrador del sistema con acceso completo'),
+(2, 'ESPECIALISTA', 'Especialista técnico para inspecciones y mantenimiento'),
+(3, 'USUARIO', 'Usuario regular con acceso limitado'),
+(4, 'CLIENTE', 'Cliente externo que solicita préstamos de equipos'),
+(5, 'ADMIN', 'Rol con acceso completo al sistema, incluyendo ...');
+
+-- Usuarios
+
+-- Especialistas
+
+INSERT INTO inventarioplus.especialistas (id_especialista,
+  nombre, documento, telefono, direccion, correo, disponibilidad
+  , activo
+)
+VALUES
+(1,'Dr. Ana Martínez', 'DUI12345678', '7012-3456', 'Col. Escalón, San Salvador', 'ana.martinez@correo.com', 'Disponible',  1),
+(2,'Ing. Carlos López', 'DUI87654321', '7201-1122', 'Santa Tecla, La Libertad', 'carlos.lopez@correo.com', 'No disponible', 1),
+(3,'Tec. Sandra Gómez', 'DUI11223344', '7890-5566', 'Soyapango, San Salvador', 'sandra.gomez@correo.com', 'Disponible', 1),
+(4,'Dr. Luis Herrera', 'DUI99887766', '7456-8899', 'Mejicanos, San Salvador', 'luis.herrera@correo.com', 'Disponible',  1),
+(5,'Ing. Patricia Díaz', 'DUI55667788', '7654-3210', 'San Miguel, El Salvador', 'patricia.diaz@correo.com', 'No disponible',  1),
+(6,'Tec. Mario Rivera', 'DUI33445566', '7123-4567', 'Ilopango, San Salvador', 'mario.rivera@correo.com', 'Disponible',  1),
+(7,'Dr. Gabriela Torres', 'DUI22334455', '7987-6543', 'Apopa, San Salvador', 'gabriela.torres@correo.com', 'Disponible', 1),
+(8,'Ing. Ernesto Méndez', 'DUI66778899', '7345-9876', 'San Vicente, El Salvador', 'ernesto.mendez@correo.com', 'No disponible',  1),
+(9,'Tec. Claudia Rivas', 'DUI44556677', '7567-1234', 'Ahuachapán, El Salvador', 'claudia.rivas@correo.com', 'Disponible', 1),
+(10,'Dr. Ricardo Molina', 'DUI77889900', '7432-6789', 'Zacatecoluca, La Paz', 'ricardo.molina@correo.com', 'Disponible',  1);
+
+
+-- Clientes
+
+INSERT INTO inventarioplus.clientes (nombre, documento, telefono, direccion, correo)
+VALUES
+  ('Ana Martínez', '012345678', '7012-3456', 'Colonia Escalón, San Salvador', 'ana.martinez@example.com'),
+  ('Carlos López', '087654321', '7890-1234', 'Santa Tecla, La Libertad', 'carlos.lopez@example.com'),
+  ('María Gómez', '011223344', '7456-7890', 'Soyapango, San Salvador', 'maria.gomez@example.com'),
+  ('Luis Torres', '099887766', '7200-4567', 'Mejicanos, San Salvador', 'luis.torres@example.com'),
+  ('Sofía Ramírez', '055443322', '7301-7890', 'San Miguel Centro', 'sofia.ramirez@example.com'),
+  ('Jorge Castillo', '066778899', '7654-3210', 'Ahuachapán Norte', 'jorge.castillo@example.com'),
+  ('Elena Cruz', '044332211', '7123-4567', 'Usulután Sur', 'elena.cruz@example.com'),
+  ('Ricardo Méndez', '033445566', '7980-1234', 'Ilopango, San Salvador', 'ricardo.mendez@example.com'),
+  ('Patricia Herrera', '022113344', '7001-9876', 'San Vicente Este', 'patricia.herrera@example.com'),
+  ('Fernando Reyes', '077889900', '7900-6543', 'La Unión Oeste', 'fernando.reyes@example.com');
+
+
+-- Mcodigos
+INSERT INTO mcodigos (grupo, codigo, nombre, descripcion, orden, activo) VALUES
+('EQUIPO', 1, 'Disponible', 'Equipo disponible para préstamo', 10, 1),
+('EQUIPO', 2, 'Prestado', 'Equipo actualmente prestado', 20, 1),
+('EQUIPO', 3, 'Mantenimiento', 'Equipo en mantenimiento', 30, 1),
+('EQUIPO', 4, 'Baja', 'Equipo dado de baja', 40, 1),
+ 
+('PRESTAMO', 1, 'Activo', 'Préstamo activo (entregado)', 10, 1),
+('PRESTAMO', 2, 'Devuelto', 'Préstamo devuelto', 20, 1),
+('PRESTAMO', 3, 'Vendido', 'Préstamo vendido', 30, 1),
+('PRESTAMO', 4, 'Anulado', 'Préstamo anulado', 40, 1),
+ 
+('MARCA', 1, 'Activa', 'Marca activa y disponible', 10, 1),
+('MARCA', 2, 'Inactiva', 'Marca temporalmente inactiva', 20, 1),
+('MARCA', 3, 'En Revisión', 'Marca en proceso de revisión', 30, 1),
+ 
+('INSPECCION', 1, 'Pendiente', 'Inspección pendiente de realizar', 10, 1),
+('INSPECCION', 2, 'Aprobado', 'Inspección aprobada', 20, 1),
+('INSPECCION', 3, 'Rechazado', 'Inspección rechazada', 30, 1);
+
+-- Tipos 
+
+INSERT INTO tipos_equipo (codigo, nombre, descripcion, activo) VALUES
+-- TIPOS EXISTENTES (asignamos serie 1000+)
+('1000', 'Laptop', 'Computadora portátil para uso general', 1),
+('1001', 'Computadora de escritorio', 'Equipo fijo para estaciones de trabajo', 1),
+('1002', 'Impresora', 'Dispositivo para impresión de documentos', 1),
+('1003', 'Proyector', 'Equipo para proyección de imágenes o presentaciones', 1),
+('1004', 'Tablet', 'Dispositivo táctil portátil', 1),
+('1005', 'Escáner', 'Equipo para digitalizar documentos físicos', 1),
+ 
+-- NUEVOS TIPOS GENERALES (serie 1010–1030)
+('1010', 'Router', 'Dispositivo para la distribución de red', 1),
+('1011', 'Switch', 'Equipo para interconexión de red', 1),
+('1012', 'Módem', 'Dispositivo para acceso a Internet', 1),
+('1013', 'Servidor', 'Equipo para alojar servicios y aplicaciones', 1),
+('1014', 'Cámara IP', 'Equipo de videovigilancia digital', 1),
+('1015', 'Sistema de Audio', 'Equipos de sonido para eventos o presentaciones', 1),
+('1016', 'Micrófono', 'Dispositivo para captura de audio', 1),
+('1017', 'Pantalla / Televisor', 'Dispositivo para visualización de contenido', 1),
+('1018', 'UPS / Respaldo Eléctrico', 'Sistema de alimentación ininterrumpida', 1),
+('1019', 'Plotter', 'Impresora de gran formato', 1),
+('1020', 'Equipo Todo-en-Uno', 'Computadora integrada en una sola unidad', 1),
+('1021', 'Drone', 'Equipo aéreo para fotografía o inspecciones', 1),
+('1022', 'Escáner 3D', 'Equipo para digitalización tridimensional', 1),
+('1023', 'Estación de Soldadura', 'Equipo especializado para reparaciones electrónicas', 1),
+('1024', 'Multímetro Digital', 'Instrumento para medición de parámetros eléctricos', 1),
+ 
+-- EQUIPOS MÉDICOS (serie 1040–1049)
+('1040', 'Resonador magnético', 'Equipo médico para imágenes por resonancia magnética', 1),
+('1041', 'Tomógrafo', 'Equipo médico para tomografía axial computarizada', 1),
+('1042', 'Rayos X', 'Equipo médico para radiografías', 1),
+('1043', 'Ventilador mecánico', 'Equipo médico para soporte respiratorio', 1),
+('1044', 'Electrocardiógrafo', 'Equipo médico para monitoreo cardíaco', 1),
+('1045', 'Ultrasonido', 'Equipo médico para diagnóstico por imágenes', 1),
+('1046', 'Incubadora neonatal', 'Equipo médico para cuidado de recién nacidos', 1),
+('1047', 'Desfibrilador', 'Equipo médico para emergencias cardíacas', 1),
+('1048', 'Mesa quirúrgica', 'Equipo médico para procedimientos quirúrgicos', 1),
+('1049', 'Autoclave', 'Equipo médico para esterilización de instrumentos', 1),
+ 
+-- TRANSPORTE Y VEHÍCULOS (serie 1050–1054)
+('1050', 'Camión cisterna', 'Vehículo para transporte de líquidos', 1),
+('1051', 'Ambulancia', 'Vehículo para transporte de pacientes', 1),
+('1052', 'Motocicleta', 'Vehículo ligero para transporte rápido', 1),
+('1053', 'Autobús', 'Vehículo para transporte de pasajeros', 1),
+('1054', 'Tráiler', 'Vehículo de carga pesada', 1),
+ 
+-- TELECOMUNICACIONES Y ELECTRÓNICOS (serie 1055–1059)
+('1055', 'Antena parabólica', 'Equipo para recepción satelital', 1),
+('1056', 'Servidor de telecomunicaciones', 'Equipo para gestión de redes móviles', 1),
+('1057', 'Central telefónica', 'Equipo para administración de llamadas', 1),
+('1058', 'Radio portátil', 'Equipo de comunicación móvil', 1),
+('1059', 'Dron', 'Equipo aéreo no tripulado para vigilancia o logística', 1),
+ 
+-- CONSTRUCCIÓN ESPECIALIZADA (serie 1060–1064)
+('1060', 'Grúa torre', 'Equipo para construcción de edificios altos', 1),
+('1061', 'Tuneladora', 'Maquinaria para excavación de túneles', 1),
+('1062', 'Planta de asfalto', 'Equipo para producción de mezcla asfáltica', 1),
+('1063', 'Planta de concreto', 'Equipo para producción de hormigón', 1),
+('1064', 'Perforadora hidráulica', 'Equipo para perforación de suelos y rocas', 1),
+ 
+-- OTROS INDUSTRIALES (serie 1065–1069)
+('1065', 'Robot industrial', 'Equipo automatizado para procesos de manufactura', 1),
+('1066', 'Impresora 3D', 'Equipo para fabricación aditiva', 1),
+('1067', 'Máquina CNC', 'Equipo de control numérico para mecanizado', 1),
+('1068', 'Sistema de refrigeración industrial', 'Equipo para conservación de productos', 1),
+('1069', 'Máquina de embalaje', 'Equipo para empaquetado de productos', 1);
+-- Marcas
+
+INSERT INTO marcas (nombre, activo) VALUES
+
+-- Marcas de computadoras
+
+('Dell', 1),
+
+('Lenovo', 1),
+
+('HP', 1),
+
+('Asus', 1),
+
+('Acer', 1),
+
+('Apple', 1),
+
+('Samsung', 1),
+
+('Microsoft', 1),
+ 
+-- Marcas de impresoras
+
+('Epson', 1),
+
+('Canon', 1),
+
+('Brother', 1),
+
+('Ricoh', 1),
+ 
+-- Redes y telecomunicaciones
+
+('Cisco', 1),
+
+('TP-Link', 1),
+
+('Ubiquiti', 1),
+
+('Huawei', 1),
+
+('MikroTik', 1),
+ 
+-- Audio / Video / Videovigilancia
+
+('Sony', 1),
+
+('Logitech', 1),
+
+('Bose', 1),
+
+('DJI', 1),
+
+('Hikvision', 1),
+ 
+-- Industria, herramientas, maquinaria
+
+('Bosch', 1),
+
+('Makita', 1),
+
+('DeWalt', 1),
+
+('Caterpillar', 1),
+
+('John Deere', 1),
+ 
+-- Tecnología avanzada / Equipos especiales
+
+('3D Systems', 1),
+
+('Siemens', 1),
+
+('General Electric', 1);
+
+ 
+
+
+-- Modelos
+INSERT INTO modelos (marca_id, nombre, codigo_modelo, descripcion, activo) VALUES
+-- ======================
+-- MODELOS DEL FORMULARIO / BASE
+-- ======================
+(1, 'Latitude 5430', 'LAT5430', 'Laptop empresarial de alto rendimiento', 1),
+(1, 'Inspiron 15', 'INSP15', 'Laptop de uso general para estudiantes y oficina', 1),
+(2, 'ThinkPad X1 Carbon', 'TPX1C', 'Ultrabook premium para ejecutivos', 1),
+(2, 'IdeaCentre AIO 3', 'IDCAIO3', 'Computadora todo-en-uno para espacios reducidos', 1),
+(3, 'HP LaserJet Pro M404', 'HPLJM404', 'Impresora monocromática rápida y eficiente', 1),
+(3, 'HP DeskJet 2755e', 'HPDJ2755E', 'Impresora color compacta para uso doméstico', 1),
+ 
+-- ======================
+-- L A P T O P S
+-- ======================
+(4, 'Asus VivoBook 15', 'ASVB15', 'Laptop ligera para uso diario', 1),
+(6, 'MacBook Air M2', 'MBAIRM2', 'Laptop ultra portátil con procesador Apple Silicon', 1),
+(1, 'XPS 13', 'XPS13', 'Ultrabook premium con pantalla InfinityEdge', 1),
+(1, 'G15', 'DELLG15', 'Laptop gamer para alto rendimiento gráfico', 1),
+(2, 'Legion 5', 'LEGL5', 'Laptop para gaming y tareas pesadas', 1),
+(2, 'IdeaPad 3', 'IDPD3', 'Laptop económica para uso general', 1),
+(3, 'Pavilion 14', 'PV14', 'Laptop de uso diario con excelente batería', 1),
+(3, 'Envy 15', 'ENVY15', 'Laptop premium para productividad y diseño', 1),
+(4, 'ROG Strix G15', 'ROGSG15', 'Laptop gamer de alta gama', 1),
+(4, 'TUF F17', 'TUFF17', 'Laptop resistente certificada para uso intensivo', 1),
+(6, 'MacBook Pro 14 M2', 'MBP14M2', 'Laptop de alto rendimiento para profesionales', 1),
+(7, 'Galaxy Book Pro', 'GBPRO', 'Laptop ultraligera con pantalla AMOLED', 1),
+ 
+-- ======================
+-- D E S K T O P S
+-- ======================
+(1, 'OptiPlex 7090', 'OPT7090', 'PC empresarial para oficina', 1),
+(2, 'ThinkCentre M70s', 'TCM70S', 'Equipo de escritorio compacto', 1),
+(3, 'HP ProDesk 600 G6', 'HPD600G6', 'Computadora empresarial de alto rendimiento', 1),
+(1, 'Precision 3650', 'PREC3650', 'Workstation para diseño gráfico y CAD', 1),
+(1, 'Vostro 3910', 'VOST3910', 'Desktop empresarial compacto', 1),
+(2, 'ThinkStation P350', 'TSP350', 'Estación de trabajo certificada para ingeniería', 1),
+(3, 'EliteDesk 800 G6', 'ED800G6', 'Equipo empresarial de alto desempeño', 1),
+ 
+-- ======================
+-- I M P R E S O R A S
+-- ======================
+(9, 'EcoTank L3250', 'EPL3250', 'Impresora multifuncional con sistema de tinta continua', 1),
+(9, 'WorkForce WF-2830', 'EPWF2830', 'Impresora para oficina con WiFi integrado', 1),
+(9, 'L8050', 'EP8050', 'Impresora fotográfica de alta resolución', 1),
+(9, 'L5290', 'EP5290', 'Multifuncional con ADF y conectividad WiFi', 1),
+(3, 'LaserJet Pro 4103', 'HPLJ4103', 'Impresora láser de alta velocidad', 1),
+(3, 'Smart Tank 720', 'HPST720', 'Impresora económica de tanque de tinta', 1),
+(10, 'PIXMA G3110', 'CNG3110', 'Impresora multifuncional con sistema continuo', 1),
+ 
+-- ======================
+-- P R O Y E C T O R E S
+-- ======================
+(1, 'Projector S518WL', 'DPS518WL', 'Proyector láser de corto alcance', 1),
+(9, 'PowerLite X39', 'EPX39', 'Proyector profesional para aulas y oficinas', 1),
+(9, 'Pro EX7280', 'EPEX7280', 'Proyector profesional para presentaciones empresariales', 1),
+(4, 'ZenBeam S2', 'ASZS2', 'Mini proyector portátil LED', 1),
+ 
+-- ======================
+-- T A B L E T S
+-- ======================
+(6, 'iPad 10th Gen', 'IPD10G', 'Tablet para uso educativo y empresarial', 1),
+(6, 'iPad Pro M2', 'IPDPM2', 'Tablet de alto rendimiento para diseño y multimedia', 1),
+(1, 'Latitude 7220 Rugged Tablet', 'LAT7220RT', 'Tablet resistente para ambientes industriales', 1),
+(7, 'Galaxy Tab S9', 'GTABS9', 'Tablet premium con pantalla AMOLED', 1),
+(4, 'Chromebook Tablet CT100', 'ASCT100', 'Tablet educativa resistente a golpes', 1),
+ 
+-- ======================
+-- R O U T E R S
+-- ======================
+(13, 'RV340', 'CSRV340', 'Router empresarial con funciones de seguridad avanzada', 1),
+(13, 'ISR 1100', 'CSISR1100', 'Router modular para entornos corporativos', 1),
+(4, 'RT-AX82U', 'ASRTAX82U', 'Router WiFi 6 para alta velocidad en el hogar', 1),
+ 
+-- ======================
+-- S W I T C H E S
+-- ======================
+(13, 'Catalyst 2960X', 'CSC2960X', 'Switch administrable para redes empresariales', 1),
+(13, 'SG350X-24', 'CSSG350X24', 'Switch L3 para infraestructuras medianas', 1),
+ 
+-- ======================
+-- M Ó D E M
+-- ======================
+(7, 'Home Hub LTE', 'SMHHLTE', 'Módem inalámbrico doméstico', 1),
+ 
+-- ======================
+-- S E R V I D O R E S
+-- ======================
+(1, 'PowerEdge T440', 'PET440', 'Servidor torre para virtualización', 1),
+(1, 'PowerEdge R740', 'PER740', 'Servidor rack de alto rendimiento', 1),
+(3, 'ProLiant DL380 Gen10', 'HPDL380G10', 'Servidor corporativo de misión crítica', 1),
+ 
+-- ======================
+-- C Á M A R A S  I P
+-- ======================
+(7, 'Wisenet IP Cam', 'WISIPC', 'Cámara IP para vigilancia con visión nocturna', 1),
+(22, 'DS-2CD2143G0-I', 'HK2143GOI', 'Cámara IP domo para videovigilancia profesional', 1),
+ 
+-- ======================
+-- A U D I O
+-- ======================
+(20, 'L1 Compact', 'BOSEL1C', 'Sistema de audio portátil para presentaciones en vivo', 1),
+ 
+-- ======================
+-- T V / P A N T A L L A S
+-- ======================
+(7, 'Crystal UHD 55', 'SMUHD55', 'Pantalla 4K para sala de juntas o aulas', 1),
+ 
+-- ======================
+-- U P S
+-- ======================
+(3, 'R1500 G4 UPS', 'HPR1500G4', 'Sistema de respaldo eléctrico interactivo', 1),
+ 
+-- ======================
+-- D R O N E S
+-- ======================
+(21, 'Mavic Air 2', 'DJMA2', 'Drone compacto para fotografía profesional', 1),
+(21, 'Phantom 4 Pro', 'DJPH4P', 'Drone avanzado para inspecciones y topografía', 1);
+
+-- Equipos
+
+INSERT INTO equipos (
+    nombre,
+    numero_serial,
+    requiere_inspeccion,
+    costo_dia,
+    descripcion,
+    fecha_disponible,
+    fecha_uso_hora,
+    requiere_especialista,
+    estado_id,
+    tipo_id,
+    modelo_id,
+    ubicacion_id,
+    codigo,
+    fecha_adquisicion,
+    imagen_url,
+    numero_serie,
+    valor_estimado,
+    marca_id,
+    costo_creacion,
+    fecha_dia
+) VALUES
+-- Latitude 5430 (modelo_id 19, marca_id 1, tipo_id 1 = Laptop)
+('Laptop Dell Latitude 5430 - A', 'LAT5430-A001',  0, 15.00,
+'Laptop empresarial de alto rendimiento', '2024-01-16 00:00:00', NULL, 0, 1, 1, 19, 1, 'EQ-LAP-001',
+'2024-01-15', NULL, 'LAT5430-A001', 1200.00, 1, 1200.00, NULL),
+('Laptop Dell Latitude 5430 - B', 'LAT5430-B002',  0, 15.00,
+'Laptop empresarial de alto rendimiento', '2024-02-11 00:00:00', NULL, 0, 1, 1, 19, 2, 'EQ-LAP-002',
+'2024-02-10', NULL, 'LAT5430-B002', 1200.00, 1, 1200.00, NULL),
+('Laptop Dell Latitude 5430 - C', 'LAT5430-C003',  0, 15.00,
+'Laptop empresarial actualmente en préstamo', '2024-03-06 00:00:00', '2024-03-06 09:00:00', 0, 2, 1, 19, 3, 'EQ-LAP-003',
+'2024-03-05', NULL, 'LAT5430-C003', 1200.00, 1, 1200.00, NULL),
+('Laptop Dell Latitude 5430 - D', 'LAT5430-D004',  1, 15.00,
+'Laptop enviada a mantenimiento preventivo', NULL, '2024-04-01 08:30:00', 0, 3, 1, 19, 4, 'EQ-LAP-004',
+'2023-11-20', NULL, 'LAT5430-D004', 1150.00, 1, 1150.00, NULL),
+ 
+-- Inspiron 15 (modelo_id 20, marca_id 1)
+('Laptop Dell Inspiron 15 - A', 'INSP15-A001',  0, 12.00,
+'Laptop de uso general para estudiantes y oficina', '2024-01-26 00:00:00', NULL, 0, 1, 1, 20, 1, 'EQ-LAP-005',
+'2024-01-25', NULL, 'INSP15-A001', 900.00, 1, 900.00, NULL),
+('Laptop Dell Inspiron 15 - B', 'INSP15-B002',  0, 12.00,
+'Laptop prestada para laboratorio de computación', '2024-02-19 00:00:00', '2024-02-19 10:00:00', 0, 2, 1, 20, 5, 'EQ-LAP-006',
+'2024-02-18', NULL, 'INSP15-B002', 900.00, 1, 900.00, NULL),
+('Laptop Dell Inspiron 15 - C', 'INSP15-C003',  0, 12.00,
+'Laptop limpia y lista para uso en aula', '2024-03-02 00:00:00', NULL, 0, 1, 1, 20, 6, 'EQ-LAP-007',
+'2024-03-01', NULL, 'INSP15-C003', 900.00, 1, 900.00, NULL),
+('Laptop Dell Inspiron 15 - D', 'INSP15-D004',  0, 12.00,
+'Laptop de respaldo para laboratorio móvil', '2024-04-02 00:00:00', NULL, 0, 1, 1, 20, 3, 'EQ-LAP-008',
+'2024-04-01', NULL, 'INSP15-D004', 880.00, 1, 880.00, NULL),
+ 
+-- ThinkPad X1 Carbon (modelo_id 21, marca_id 2)
+('Laptop Lenovo ThinkPad X1 Carbon - A', 'TPX1C-A001',  0, 20.00,
+'Ultrabook premium para ejecutivos', '2023-12-11 00:00:00', NULL, 0, 1, 1, 21, 2, 'EQ-LAP-009',
+'2023-12-10', NULL, 'TPX1C-A001', 1800.00, 2, 1800.00, NULL),
+('Laptop Lenovo ThinkPad X1 Carbon - B', 'TPX1C-B002',  0, 20.00,
+'Ultrabook asignada a dirección académica', '2024-01-09 00:00:00', '2024-01-09 08:45:00', 0, 2, 1, 21, 3, 'EQ-LAP-010',
+'2024-01-08', NULL, 'TPX1C-B002', 1800.00, 2, 1800.00, NULL),
+ 
+-- IdeaCentre AIO 3 (modelo_id 22, marca_id 2, tipo_id 2 = Desktop)
+('Desktop Lenovo IdeaCentre AIO 3 - A', 'IDCAIO3-A001',  0, 10.00,
+'Computadora todo-en-uno para laboratorio de informática', '2023-10-16 00:00:00', NULL, 0, 1, 2, 22, 4, 'EQ-DESK-001',
+'2023-10-15', NULL, 'IDCAIO3-A001', 950.00, 2, 950.00, NULL),
+('Desktop Lenovo IdeaCentre AIO 3 - B', 'IDCAIO3-B002',  0, 10.00,
+'Computadora todo-en-uno instalada en oficina central', '2023-11-03 00:00:00', NULL, 0, 1, 2, 22, 5, 'EQ-DESK-002',
+'2023-11-02', NULL, 'IDCAIO3-B002', 950.00, 2, 950.00, NULL),
+('Desktop Lenovo IdeaCentre AIO 3 - C', 'IDCAIO3-C003',  1, 10.00,
+'Equipo enviado a revisión por fallos de video', NULL, '2023-09-29 09:15:00', 0, 3, 2, 22, 6, 'EQ-DESK-003',
+'2023-09-28', NULL, 'IDCAIO3-C003', 900.00, 2, 900.00, NULL),
+('Desktop Lenovo IdeaCentre AIO 3 - D', 'IDCAIO3-D004',  0, 10.00,
+'Equipo destinado a recepción y atención al público', '2023-12-06 00:00:00', NULL, 0, 1, 2, 22, 7, 'EQ-DESK-004',
+'2023-12-05', NULL, 'IDCAIO3-D004', 930.00, 2, 930.00, NULL),
+ 
+-- HP LaserJet Pro M404 (modelo_id 23, marca_id 3, tipo_id 3 = Impresora)
+('Impresora HP LaserJet Pro M404 - A', 'HPLJM404-A001',  1, 6.00,
+'Impresora láser para oficina administrativa', '2023-08-11 00:00:00', NULL, 0, 1, 3, 23, 7, 'EQ-IMP-001',
+'2023-08-10', NULL, 'HPLJM404-A001', 500.00, 3, 500.00, NULL),
+('Impresora HP LaserJet Pro M404 - B', 'HPLJM404-B002',  1, 6.00,
+'Impresora asignada temporalmente a bodega A', '2023-08-26 00:00:00', '2023-08-26 14:20:00', 0, 2, 3, 23,1, 'EQ-IMP-002',
+'2023-08-25', NULL, 'HPLJM404-B002', 500.00, 3, 500.00, NULL),
+('Impresora HP LaserJet Pro M404 - C', 'HPLJM404-C003',  1, 6.00,
+'Impresora en revisión por calidad de impresión', NULL, '2023-09-05 10:00:00', 0, 3, 3, 23, 1, 'EQ-IMP-003',
+'2023-09-01', NULL, 'HPLJM404-C003', 480.00, 3, 480.00, NULL),
+ 
+-- HP DeskJet 2755e (modelo_id 24, marca_id 3)
+('Impresora HP DeskJet 2755e - A', 'HPDJ2755E-A001',  1, 4.00,
+'Impresora color compacta para uso doméstico / oficina pequeña', '2023-07-16 00:00:00', NULL, 0, 1, 3, 24, 8, 'EQ-IMP-004',
+'2023-07-15', NULL, 'HPDJ2755E-A001', 300.00, 3, 300.00, NULL),
+('Impresora HP DeskJet 2755e - B', 'HPDJ2755E-B002',  1, 4.00,
+'Equipo en mantenimiento por atasco de papel', NULL, '2023-07-21 11:30:00', 0, 3, 3, 24, 9, 'EQ-IMP-005',
+'2023-07-20', NULL, 'HPDJ2755E-B002', 280.00, 3, 280.00, NULL),
+('Impresora HP DeskJet 2755e - C', 'HPDJ2755E-C003', 1, 0.00,
+'Impresora dada de baja por daño irreparable', NULL, NULL, 0, 4, 3, 24, 2, 'EQ-IMP-006',
+'2022-05-10', NULL, 'HPDJ2755E-C003', 0.00, 3, 0.00, NULL);
+
+
+-- Ubicaciones
+
+INSERT INTO ubicaciones
+(codigo, nombre, tipo, responsable, telefono, direccion, activo)
+VALUES
+('BOD-A',  'Bodega A',        'Bodega',      'Juan Pérez',       '7010-1122', 'Zona Industrial, San Salvador', 1),
+('TALL-2', 'Taller 2',        'Taller',      'Carlos López',     '7010-1123', 'Calle Principal, Soyapango', 1),
+('PAT-01', 'Patio',           'Patio',       'Encargado Patio',  '7010-1124', 'Área Externa, San Salvador', 1),
+('OFI-CEN','Oficina Central', 'Oficina',     'María Ruiz',       '7010-1125', 'Centro de San Salvador', 1),
+('BOD-B',  'Bodega B',        'Bodega',      'José Martínez',    '7010-1126', 'Km 12 Carretera a Sonsonate', 1),
+('LAB-01', 'Laboratorio',     'Laboratorio', 'Andrea Campos',    '7010-1127', 'Edificio Técnico, San Salvador', 1),
+('TALL-1', 'Taller 1',        'Taller',      'Carlos López',     '7010-1128', 'Zona Industrial Norte', 1),
+('OBR-NO', 'Obra Norte',      'Obra',        'Encargado Obra',   '7010-1129', 'Sector Norte, Apopa', 1),
+('OFI-ANE','Oficina Anexo',   'Oficina',     'Juan Rivera',      '7010-1130', 'Anexo Administrativo, San Salvador', 1);
+
+-- Prestamos
+
+
+
+-- Evaluaciones
+
+INSERT INTO inventarioplus.evaluaciones_tecnicas (
+  aprobado, observaciones, id_equipo, id_usuario
+)
+VALUES
+(b'1', 'Equipo en excelente estado. Listo para uso operativo.', 1, 7),
+(b'0', 'Falla en módulo de red. Requiere revisión técnica.', 2, 7),
+(b'1', 'Inspección completa. No se detectaron anomalías.', 3, 7),
+(b'1', 'Aprobado para uso en campo. Rendimiento óptimo.', 4, 7),
+(b'0', 'Pantalla con rayones. No se recomienda para presentaciones.', 5, 7),
+(b'1', 'Evaluación positiva. Batería y conectividad funcional.', 6, 7),
+(b'0', 'Ruido en ventilador. Se sugiere mantenimiento preventivo.', 7, 7),
+(b'1', 'Equipo verificado. Listo para asignación operativa.', 8, 7),
+(b'1', 'Condiciones aceptables. Aprobado para uso administrativo.', 9, 7),
+(b'0', 'No cumple con requisitos de seguridad eléctrica.', 10, 7);
+
+
+
+-- Devoluciones
+INSERT INTO inventarioplus.devoluciones (
+  id_prestamo, fecha_registro_devolucion, fecha_devolucion_real,
+  condicion_al_devolver, observaciones, solicitar_inspeccion,
+  especialista_asignado_id, fecha_inspeccion_programada,
+  inspeccion_realizada, estado_inspeccion, creado_por,
+  fecha_creacion, fecha_actualizacion
+)
+VALUES
+(1, '2025-12-01 08:00:00', '2025-12-01 07:45:00', 'Sin daños visibles', 'Uso interno sin incidentes', 'No', NULL, NULL, 'No', 'No requerida', 1001, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(2, '2025-12-02 08:00:00', '2025-12-02 07:50:00', 'Rayón leve en carcasa', 'Retraso por mantenimiento', 'Sí', 1, '2025-12-03 09:00:00', 'Sí', 'Completada', 1002, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(3, '2025-12-03 08:00:00', '2025-12-03 07:55:00', 'Pantalla con polvo', 'Uso en campo', 'No', NULL, NULL, 'No', 'No requerida', 1003, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(4, '2025-12-04 08:00:00', '2025-12-04 07:40:00', 'Funcionando correctamente', 'Capacitación técnica', 'Sí', 2, '2025-12-05 10:00:00', 'Sí', 'Completada', 1004, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(5, '2025-12-05 08:00:00', '2025-12-05 07:50:00', 'Sin observaciones', 'Evento institucional', 'No', NULL, NULL, 'No', 'No requerida', 1005, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(6, '2025-12-06 08:00:00', '2025-12-06 07:55:00', 'Buen estado general', 'Asignado a proyecto X', 'Sí', 3, '2025-12-07 11:00:00', 'Sí', 'Completada', 1006, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(7, '2025-12-07 08:00:00', '2025-12-07 07:45:00', 'Sin daños', 'Uso externo', 'No', NULL, NULL, 'No', 'No requerida', 1007, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(8, '2025-12-08 08:00:00', '2025-12-08 07:50:00', 'Requiere limpieza', 'Uso en campo húmedo', 'Sí', 4, '2025-12-09 09:30:00', 'Sí', 'Completada', 1008, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(9, '2025-12-09 08:00:00', '2025-12-09 07:55:00', 'Sin novedades', 'Uso en oficina', 'No', NULL, NULL, 'No', 'No requerida', 1009, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(10, '2025-12-10 08:00:00', '2025-12-10 07:50:00', 'Buen estado', 'Uso técnico', 'Sí', 5, '2025-12-11 10:00:00', 'Sí', 'Completada', 1010, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(11, '2025-12-11 08:00:00', '2025-12-11 07:45:00', 'Sin observaciones', 'Uso en capacitación', 'No', NULL, NULL, 'No', 'No requerida', 1011, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(12, '2025-12-12 08:00:00', '2025-12-12 07:50:00', 'Rayón leve', 'Uso prolongado', 'Sí', 6, '2025-12-13 09:00:00', 'Sí', 'Completada', 1012, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(13, '2025-12-13 08:00:00', '2025-12-13 07:55:00', 'Sin daños', 'Uso externo', 'No', NULL, NULL, 'No', 'No requerida', 1013, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(14, '2025-12-14 08:00:00', '2025-12-14 07:50:00', 'Pantalla con polvo', 'Uso en campo', 'Sí', 7, '2025-12-15 10:00:00', 'Sí', 'Completada', 1014, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(15, '2025-12-15 08:00:00', '2025-12-15 07:45:00', 'Funcionando correctamente', 'Evento técnico', 'No', NULL, NULL, 'No', 'No requerida', 1015, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(16, '2025-12-16 08:00:00', '2025-12-16 07:50:00', 'Sin observaciones', 'Uso interno', 'Sí', 8, '2025-12-17 09:00:00', 'Sí', 'Completada', 1016, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(17, '2025-12-17 08:00:00', '2025-12-17 07:55:00', 'Buen estado', 'Uso externo', 'No', NULL, NULL, 'No', 'No requerida', 1017, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(18, '2025-12-18 08:00:00', '2025-12-18 07:50:00', 'Requiere limpieza', 'Uso en campo húmedo', 'Sí', 9, '2025-12-19 10:00:00', 'Sí', 'Completada', 1018, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(19, '2025-12-19 08:00:00', '2025-12-19 07:45:00', 'Sin novedades', 'Uso en oficina', 'No', NULL, NULL, 'No', 'No requerida', 1019, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(20, '2025-12-20 08:00:00', '2025-12-20 07:50:00', 'Buen estado', 'Uso técnico', 'Sí', 10, '2025-12-21 09:00:00', 'Sí', 'Completada', 1020, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+
+-- Reportes

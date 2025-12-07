@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Reporte de Devoluciones -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="devoluciones" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9f1a9b0-0000-0000-0000-000000000001">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Dummy Data Adapter"/>
+    <field name="idDevolucion" class="java.lang.Integer"/>
+    <field name="idPrestamo" class="java.lang.Long"/>
+    <field name="fechaRegistroDevolucion" class="java.time.LocalDateTime"/>
+    <field name="fechaDevolucionReal" class="java.time.LocalDateTime"/>
+    <field name="condicionAlDevolver" class="java.lang.String"/>
+    <field name="observaciones" class="java.lang.String"/>
+    <field name="inspeccionTexto" class="java.lang.String"/>
+    <field name="especialistaAsignadoId" class="java.lang.Integer"/>
+    <field name="especialistaNombre" class="java.lang.String"/>
+    <field name="estadoInspeccion" class="java.lang.String"/>
+    <field name="inspeccionRealizada" class="java.lang.String"/>
+
+    <title>
+        <band height="60">
+            <staticText>
+                <reportElement x="0" y="10" width="802" height="40" uuid="a1b2c3d4-e5f6-7890-1234-567890abcdef"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="20" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Reporte de Devoluciones]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="30">
+            <staticText>
+                <reportElement mode="Opaque" x="0" y="0" width="50" height="30" backcolor="#E0E0E0" uuid="b1b2c3d4-e5f6-7890-1234-567890abcde1"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" size="9"/>
+                </textElement>
+                <text><![CDATA[ID]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="50" y="0" width="70" height="30" backcolor="#E0E0E0" uuid="b2b2c3d4-e5f6-7890-1234-567890abcde2"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" size="9"/>
+                </textElement>
+                <text><![CDATA[ID Préstamo]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="120" y="0" width="110" height="30" backcolor="#E0E0E0" uuid="b3b2c3d4-e5f6-7890-1234-567890abcde3"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" size="9"/>
+                </textElement>
+                <text><![CDATA[Fecha Registro]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="230" y="0" width="110" height="30" backcolor="#E0E0E0" uuid="b4b2c3d4-e5f6-7890-1234-567890abcde4"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" size="9"/>
+                </textElement>
+                <text><![CDATA[Fecha Real]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="340" y="0" width="100" height="30" backcolor="#E0E0E0" uuid="b5b2c3d4-e5f6-7890-1234-567890abcde5"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" size="9"/>
+                </textElement>
+                <text><![CDATA[Condición]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="440" y="0" width="150" height="30" backcolor="#E0E0E0" uuid="b6b2c3d4-e5f6-7890-1234-567890abcde6"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" size="9"/>
+                </textElement>
+                <text><![CDATA[Observaciones]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="590" y="0" width="70" height="30" backcolor="#E0E0E0" uuid="b7b2c3d4-e5f6-7890-1234-567890abcde7"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" size="9"/>
+                </textElement>
+                <text><![CDATA[Inspección]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="660" y="0" width="72" height="30" backcolor="#E0E0E0" uuid="b8b2c3d4-e5f6-7890-1234-567890abcde8"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" size="9"/>
+                </textElement>
+                <text><![CDATA[Especialista]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="732" y="0" width="70" height="30" backcolor="#E0E0E0" uuid="b9b2c3d4-e5f6-7890-1234-567890abcde9"/>
+                <box><pen lineWidth="0.5"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true" size="9"/>
+                </textElement>
+                <text><![CDATA[Estado]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="25">
+            <textField isBlankWhenNull="true">
+                <reportElement x="0" y="0" width="50" height="25" uuid="c1b2c3d4-e5f6-7890-1234-567890abcde1"/>
+                <box><pen lineWidth="0.5" lineColor="#D0D0D0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{idDevolucion}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="50" y="0" width="70" height="25" uuid="c2b2c3d4-e5f6-7890-1234-567890abcde2"/>
+                <box><pen lineWidth="0.5" lineColor="#D0D0D0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{idPrestamo}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="120" y="0" width="110" height="25" uuid="c3b2c3d4-e5f6-7890-1234-567890abcde3"/>
+                <box><pen lineWidth="0.5" lineColor="#D0D0D0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{fechaRegistroDevolucion}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="230" y="0" width="110" height="25" uuid="c4b2c3d4-e5f6-7890-1234-567890abcde4"/>
+                <box><pen lineWidth="0.5" lineColor="#D0D0D0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{fechaDevolucionReal}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="340" y="0" width="100" height="25" uuid="c5b2c3d4-e5f6-7890-1234-567890abcde5"/>
+                <box><pen lineWidth="0.5" lineColor="#D0D0D0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{condicionAlDevolver}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="440" y="0" width="150" height="25" uuid="c6b2c3d4-e5f6-7890-1234-567890abcde6"/>
+                <box><pen lineWidth="0.5" lineColor="#D0D0D0"/></box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font size="7"/>
+                    <paragraph leftIndent="3"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{observaciones}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="590" y="0" width="70" height="25" uuid="c7b2c3d4-e5f6-7890-1234-567890abcde7"/>
+                <box><pen lineWidth="0.5" lineColor="#D0D0D0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{inspeccionTexto}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="660" y="0" width="72" height="25" uuid="c8b2c3d4-e5f6-7890-1234-567890abcde8"/>
+                <box><pen lineWidth="0.5" lineColor="#D0D0D0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{especialistaNombre}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="732" y="0" width="70" height="25" uuid="c9b2c3d4-e5f6-7890-1234-567890abcde9"/>
+                <box><pen lineWidth="0.5" lineColor="#D0D0D0"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{estadoInspeccion}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <pageFooter>
+        <band height="30">
+            <textField>
+                <reportElement x="350" y="10" width="100" height="20" uuid="d1b2c3d4-e5f6-7890-1234-567890abcdef"/>
+                <textElement textAlignment="Center">
+                    <font size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+
+</jasperReport>

@@ -28,6 +28,8 @@ import com.example.InventarioPlus.repository.EquipoRepository;
 import com.example.InventarioPlus.repository.EvaluacionTecnicaRepository;
 import com.example.InventarioPlus.repository.HistorialRepository;
 import com.example.InventarioPlus.repository.UsuarioRepository;
+import com.example.InventarioPlus.repository.DevolucionRepository;
+import com.example.InventarioPlus.repository.EspecialistaRepository;
 
 @Service
 public class ReportService {
@@ -46,6 +48,12 @@ public class ReportService {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
+
+    @Autowired
+    private DevolucionRepository devolucionRepository;
+
+    @Autowired
+    private EspecialistaRepository especialistaRepository;
 
     /**
      * Genera el reporte por nombre y formato. Busca primero un .jasper en classpath
@@ -123,6 +131,50 @@ public class ReportService {
                     map.put("usuarioNombre", usuarioNombre);
                     dtoList.add(map);
                 }
+                dataSource = new JRBeanCollectionDataSource(dtoList);
+                break;
+            }
+            case "devoluciones": {
+                List<com.example.InventarioPlus.model.Devolucion> items = devolucionRepository.findAll();
+
+                // Pre-cargar especialistas en un mapa id->nombre para evitar consultas por fila
+                Map<Long, String> especialistas = new HashMap<>();
+                for (com.example.InventarioPlus.model.Especialista e : especialistaRepository.findAll()) {
+                    if (e.getId() != null) {
+                        especialistas.put(e.getId(), e.getNombre());
+                    }
+                }
+
+                // Armar DTOs planos con valores listos para el JRXML
+                java.util.List<Map<String, Object>> dtoList = new java.util.ArrayList<>();
+                for (com.example.InventarioPlus.model.Devolucion d : items) {
+                    Map<String, Object> map = new HashMap<>();
+                    map.put("idDevolucion", d.getIdDevolucion());
+                    map.put("idPrestamo", d.getIdPrestamo());
+                    map.put("fechaRegistroDevolucion", d.getFechaRegistroDevolucion());
+                    map.put("fechaDevolucionReal", d.getFechaDevolucionReal());
+                    map.put("condicionAlDevolver", d.getCondicionAlDevolver());
+                    map.put("observaciones", d.getObservaciones());
+
+                    // Convertir 0/1/null a "Si"/"No"
+                    String insp = d.getSolicitarInspeccion();
+                    boolean isYes = insp != null && !insp.trim().isEmpty() && !"0".equalsIgnoreCase(insp.trim())
+                            && !"false".equalsIgnoreCase(insp.trim());
+                    map.put("inspeccionTexto", isYes ? "Si" : "No");
+
+                    map.put("especialistaAsignadoId", d.getEspecialistaAsignadoId());
+                    if (d.getEspecialistaAsignadoId() != null) {
+                        map.put("especialistaNombre", especialistas.get(d.getEspecialistaAsignadoId().longValue()));
+                    } else {
+                        map.put("especialistaNombre", null);
+                    }
+
+                    map.put("estadoInspeccion", d.getEstadoInspeccion());
+                    map.put("inspeccionRealizada", d.getInspeccionRealizada());
+
+                    dtoList.add(map);
+                }
+
                 dataSource = new JRBeanCollectionDataSource(dtoList);
                 break;
             }

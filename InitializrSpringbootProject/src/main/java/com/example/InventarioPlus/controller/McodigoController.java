@@ -27,7 +27,10 @@ public class McodigoController {
     }
 
     @GetMapping
-    public List<MCodigos> listarCodigos() {
+    public List<MCodigos> listarCodigos(@RequestParam(value = "grupo", required = false) String grupo) {
+        if (grupo != null && !grupo.trim().isEmpty()) {
+            return mCodigoService.listarCodigosPorGrupo(grupo.trim());
+        }
         return mCodigoService.listarCodigos();
     }
 

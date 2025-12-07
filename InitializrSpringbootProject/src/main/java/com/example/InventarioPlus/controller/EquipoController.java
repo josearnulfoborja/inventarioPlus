@@ -4,7 +4,6 @@
  */
 package com.example.InventarioPlus.controller;
 
-
 /**
  *
  * @author User
@@ -43,16 +42,8 @@ public class EquipoController {
 
     @PutMapping("/{id}")
     public Equipo actualizarEquipo(@PathVariable Long id, @RequestBody Equipo equipo) {
-        return equipoService.obtenerEquipoPorId(id).map(e -> {
-            e.setNombre(equipo.getNombre());
-            e.setDescripcion(equipo.getDescripcion());
-            e.setEstado(equipo.getEstado());
-            e.setCostoDia(equipo.getCostoDia());
-            e.setFechaDisponible(equipo.getFechaDisponible());
-            e.setFechaUsoHora(equipo.getFechaUsoHora());
-            e.setRequiereEspecialista(equipo.getRequiereEspecialista());
-            return equipoService.guardarEquipo(e);
-        }).orElseThrow(() -> new RuntimeException("Equipo no encontrado con id " + id));
+        equipo.setId(id);
+        return equipoService.guardarEquipo(equipo);
     }
 
     @DeleteMapping("/{id}")

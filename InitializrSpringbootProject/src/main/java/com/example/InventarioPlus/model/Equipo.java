@@ -1,6 +1,8 @@
 package com.example.InventarioPlus.model;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -20,11 +22,11 @@ public class Equipo {
     @Column(name = "numero_serial", length = 100)
     private String numeroSerial;
 
-    @Column(length = 100)
-    private String estado;
-
     @Column(name = "requiere_inspeccion")
     private Boolean requiereInspeccion;
+
+    @Column(name = "fecha_creacion")
+    private LocalDateTime fechaCreacion;
 
     @Column(name = "fecha_actualizacion")
     private LocalDateTime fechaActualizacion;
@@ -51,9 +53,6 @@ public class Equipo {
     private Boolean activo;
 
     @Column(length = 100)
-    private String categoria;
-
-    @Column(length = 100)
     private String codigo;
 
     @Column(name = "fecha_adquisicion")
@@ -67,18 +66,39 @@ public class Equipo {
 
     @Column(name = "valor_estimado", precision = 12, scale = 2)
     private BigDecimal valorEstimado;
-    
+
     @Column(name = "costo_dia", precision = 12, scale = 2)
     private BigDecimal costoDia;
 
     // Relaciones (pueden ser ajustadas según tus entidades)
-    @ManyToOne
+    @ManyToOne(optional = true)
     @JoinColumn(name = "modelo_id")
     private Modelo modelo;
 
-    @ManyToOne
+    @ManyToOne(optional = true)
     @JoinColumn(name = "tipo_id")
     private TipoEquipo tipo;
+
+    // Campos transitorios para recibir IDs en JSON
+    @Transient
+    @JsonProperty("modelo_id")
+    private Long modeloId;
+
+    @Transient
+    @JsonProperty("tipo_id")
+    private Long tipoId;
+
+    @Transient
+    @JsonProperty("estado_id")
+    private Long estadoId;
+
+    @Transient
+    @JsonProperty("ubicacion_id")
+    private Long ubicacionId;
+
+    @Transient
+    @JsonProperty("marca_id")
+    private Long marcaId;
 
     public Long getId() {
         return id;
@@ -92,12 +112,12 @@ public class Equipo {
         return numeroSerial;
     }
 
-    public String getEstado() {
-        return estado;
-    }
-
     public Boolean getRequiereInspeccion() {
         return requiereInspeccion;
+    }
+
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
     }
 
     public LocalDateTime getFechaActualizacion() {
@@ -107,6 +127,7 @@ public class Equipo {
     public BigDecimal getCostoCreacion() {
         return costoCreacion;
     }
+
     public LocalDateTime getFechaDia() {
         return fechaDia;
     }
@@ -129,10 +150,6 @@ public class Equipo {
 
     public Boolean getActivo() {
         return activo;
-    }
-
-    public String getCategoria() {
-        return categoria;
     }
 
     public String getCodigo() {
@@ -175,19 +192,20 @@ public class Equipo {
         return marca;
     }
 
-    @ManyToOne
+    @ManyToOne(optional = true)
     @JoinColumn(name = "estado_id")
     private EstadosEquipo estadoEquipo;
 
-    @ManyToOne
+    @ManyToOne(optional = true)
     @JoinColumn(name = "ubicacion_id")
     private Ubicacion ubicacion;
 
-    @ManyToOne
+    @ManyToOne(optional = true)
     @JoinColumn(name = "marca_id")
     private Marca marca;
 
-    public Equipo() {}
+    public Equipo() {
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -201,12 +219,12 @@ public class Equipo {
         this.numeroSerial = numeroSerial;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
     public void setRequiereInspeccion(Boolean requiereInspeccion) {
         this.requiereInspeccion = requiereInspeccion;
+    }
+
+    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
     }
 
     public void setFechaActualizacion(LocalDateTime fechaActualizacion) {
@@ -239,10 +257,6 @@ public class Equipo {
 
     public void setActivo(Boolean activo) {
         this.activo = activo;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
     }
 
     public void setCodigo(String codigo) {
@@ -291,5 +305,51 @@ public class Equipo {
 
     public void setCostoDia(BigDecimal costoDia) {
         this.costoDia = costoDia;
+    }
+
+    // Getters y setters para IDs transitorios
+    @JsonIgnore
+    public Long getModeloId() {
+        return modeloId;
+    }
+
+    public void setModeloId(Long modeloId) {
+        this.modeloId = modeloId;
+    }
+
+    @JsonIgnore
+    public Long getTipoId() {
+        return tipoId;
+    }
+
+    public void setTipoId(Long tipoId) {
+        this.tipoId = tipoId;
+    }
+
+    @JsonIgnore
+    public Long getEstadoId() {
+        return estadoId;
+    }
+
+    public void setEstadoId(Long estadoId) {
+        this.estadoId = estadoId;
+    }
+
+    @JsonIgnore
+    public Long getUbicacionId() {
+        return ubicacionId;
+    }
+
+    public void setUbicacionId(Long ubicacionId) {
+        this.ubicacionId = ubicacionId;
+    }
+
+    @JsonIgnore
+    public Long getMarcaId() {
+        return marcaId;
+    }
+
+    public void setMarcaId(Long marcaId) {
+        this.marcaId = marcaId;
     }
 }

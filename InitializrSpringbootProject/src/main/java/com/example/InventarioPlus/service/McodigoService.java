@@ -29,6 +29,10 @@ public class McodigoService {
         return mCodigoRepository.findAll();
     }
 
+    public List<MCodigos> listarCodigosPorGrupo(String grupo) {
+        return mCodigoRepository.findByGrupoIgnoreCaseAndActivoTrueOrderByOrdenAsc(grupo);
+    }
+
     public Optional<MCodigos> obtenerCodigoPorId(Integer id) {
         return mCodigoRepository.findById(id);
     }

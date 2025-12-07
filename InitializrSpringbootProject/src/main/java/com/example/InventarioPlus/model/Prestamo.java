@@ -33,8 +33,16 @@ public class Prestamo {
     @Column(name = "id_cliente")
     private Long clienteId;
 
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
+    private Cliente cliente;
+
     @Column(name = "id_equipo")
     private Long equipoId;
+
+    @ManyToOne
+    @JoinColumn(name = "id_equipo", insertable = false, updatable = false)
+    private Equipo equipo;
 
     @Column(name = "id_especialista")
     private Long especialistaId;
@@ -136,6 +144,22 @@ public class Prestamo {
 
     public void setEspecialistaId(Long especialistaId) {
         this.especialistaId = especialistaId;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Equipo getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
     }
 
 }

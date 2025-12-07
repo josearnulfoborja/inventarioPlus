@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 @Service
 public class UsuarioService {
 
@@ -40,6 +41,11 @@ public class UsuarioService {
         return usuarioRepository.findById(id);
     }
 
+    // Obtener usuario por username
+    public Optional<Usuario> obtenerUsuarioPorUsername(String username) {
+        return usuarioRepository.findByUsername(username);
+    }
+
     // ⭐ MODIFICAR: Hashear contraseña antes de guardar
     public Usuario guardarUsuario(Usuario usuario) {
         // Si es un usuario nuevo O si se está actualizando la contraseña
@@ -54,7 +60,7 @@ public class UsuarioService {
             throw new IllegalArgumentException("La contraseña es requerida para crear un nuevo usuario");
         }
         // Si es actualización y password está vacío, se mantiene la contraseña actual
-        
+
         return usuarioRepository.save(usuario);
     }
 

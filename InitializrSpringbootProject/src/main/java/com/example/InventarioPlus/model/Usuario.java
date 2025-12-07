@@ -7,7 +7,6 @@ package com.example.InventarioPlus.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
@@ -50,11 +49,15 @@ public class Usuario {
     @Column(length = 10)
     private String dui;
 
-    public Usuario() {}
+    @Column(name = "nombre_imagen", length = 255)
+    private String nombreImagen;
+
+    public Usuario() {
+    }
 
     public Usuario(String nombre, String apellido, String correoElectronico, String telefono,
-                   String username, String password, Integer rolId, Boolean activo,
-                   LocalDateTime fechaCreacion, LocalDateTime fechaActualizacion, String dui) {
+            String username, String password, Integer rolId, Boolean activo,
+            LocalDateTime fechaCreacion, LocalDateTime fechaActualizacion, String dui, String nombreImagen) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correoElectronico = correoElectronico;
@@ -66,12 +69,14 @@ public class Usuario {
         this.fechaCreacion = fechaCreacion;
         this.fechaActualizacion = fechaActualizacion;
         this.dui = dui;
+        this.nombreImagen = nombreImagen;
     }
 
     // Getters y setters
     public Long getIdUsuario() {
         return idUsuario;
     }
+
     public void setIdUsuario(Long idUsuario) {
         this.idUsuario = idUsuario;
     }
@@ -79,6 +84,7 @@ public class Usuario {
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -86,6 +92,7 @@ public class Usuario {
     public String getApellido() {
         return apellido;
     }
+
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
@@ -93,6 +100,7 @@ public class Usuario {
     public String getCorreoElectronico() {
         return correoElectronico;
     }
+
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
     }
@@ -100,6 +108,7 @@ public class Usuario {
     public String getTelefono() {
         return telefono;
     }
+
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
@@ -107,6 +116,7 @@ public class Usuario {
     public String getUsername() {
         return username;
     }
+
     public void setUsername(String username) {
         this.username = username;
     }
@@ -114,6 +124,7 @@ public class Usuario {
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -121,6 +132,7 @@ public class Usuario {
     public Integer getRolId() {
         return rolId;
     }
+
     public void setRolId(Integer rolId) {
         this.rolId = rolId;
     }
@@ -128,6 +140,7 @@ public class Usuario {
     public Boolean getActivo() {
         return activo;
     }
+
     public void setActivo(Boolean activo) {
         this.activo = activo;
     }
@@ -135,6 +148,7 @@ public class Usuario {
     public LocalDateTime getFechaCreacion() {
         return fechaCreacion;
     }
+
     public void setFechaCreacion(LocalDateTime fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
@@ -142,6 +156,7 @@ public class Usuario {
     public LocalDateTime getFechaActualizacion() {
         return fechaActualizacion;
     }
+
     public void setFechaActualizacion(LocalDateTime fechaActualizacion) {
         this.fechaActualizacion = fechaActualizacion;
     }
@@ -149,7 +164,16 @@ public class Usuario {
     public String getDui() {
         return dui;
     }
+
     public void setDui(String dui) {
         this.dui = dui;
+    }
+
+    public String getNombreImagen() {
+        return nombreImagen;
+    }
+
+    public void setNombreImagen(String nombreImagen) {
+        this.nombreImagen = nombreImagen;
     }
 }
