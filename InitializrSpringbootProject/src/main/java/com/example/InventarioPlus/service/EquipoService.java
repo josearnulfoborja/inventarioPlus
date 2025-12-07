@@ -22,6 +22,8 @@ import com.example.InventarioPlus.repository.EstadosEquipoRepository;
 import com.example.InventarioPlus.repository.UbicacionRepository;
 import com.example.InventarioPlus.repository.MarcaRepository;
 import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
 import java.util.List;

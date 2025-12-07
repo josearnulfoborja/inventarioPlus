@@ -91,6 +91,11 @@ public class UsuarioController {
     public ResponseEntity<?> obtenerPerfil(Authentication authentication) {
         Map<String, Object> response = new HashMap<>();
 
+        if (authentication == null || authentication.getName() == null) {
+            response.put("error", "ID de usuario no disponible");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
+        }
+
         String username = authentication.getName();
         Optional<Usuario> usuarioOpt = usuarioService.obtenerUsuarioPorUsername(username);
 
@@ -116,6 +121,11 @@ public class UsuarioController {
             Authentication authentication) throws IOException {
 
         Map<String, Object> response = new HashMap<>();
+
+        if (authentication == null || authentication.getName() == null) {
+            response.put("error", "ID de usuario no disponible");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
+        }
 
         // Obtener el usuario autenticado
         String username = authentication.getName();
